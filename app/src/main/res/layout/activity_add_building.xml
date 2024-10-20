@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Mã dãy -->
+    <EditText
+        android:id="@+id/editTextBuildingCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã dãy"
+        android:inputType="number" />
+
+    <!-- Tên dãy -->
+    <EditText
+        android:id="@+id/editTextBuildingName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên dãy"
+        android:inputType="text" />
+
+    <!-- Mô tả dãy -->
+    <EditText
+        android:id="@+id/editTextBuildingDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mô tả dãy"
+        android:inputType="textMultiLine"
+        android:minLines="3" />
+
+    <!-- Button thêm dãy -->
+    <Button
+        android:id="@+id/buttonAddBuilding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm dãy trọ"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

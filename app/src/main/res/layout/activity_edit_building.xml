@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextBuildingName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên dãy trọ"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:minHeight="48px"
+        android:minWidth="48px" />
+
+    <EditText
+        android:id="@+id/editTextBuildingDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mô tả dãy trọ"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:minHeight="48px"
+        android:minWidth="48px" />
+
+    <Button
+        android:id="@+id/buttonUpdateBuilding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật dãy trọ"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonDeleteBuilding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xóa dãy trọ"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/holo_red_dark" />
+</LinearLayout>

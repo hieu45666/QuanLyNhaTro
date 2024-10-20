@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewBuildingsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách dãy nhà trọ"
+        android:textSize="18sp"
+        android:padding="8dp" />
+
+    <!-- Danh sách dãy nhà trọ -->
+    <ExpandableListView
+        android:id="@+id/expandableListViewBuildings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBuildingsTitle" />
+
+    <TextView
+        android:id="@+id/textViewUnassignedRoomsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhà trọ chưa có dãy"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:layout_below="@id/expandableListViewBuildings" />
+
+    <!-- Danh sách nhà trọ chưa có dãy -->
+    <ListView
+        android:id="@+id/listViewUnassignedRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUnassignedRoomsTitle"
+        android:dividerHeight="1dp"
+        android:layout_weight="1" />
+
+    <!-- Nút thêm dãy trọ -->
+    <ImageButton
+        android:id="@+id/buttonAddBuilding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@null"
+        android:contentDescription="Thêm dãy trọ"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

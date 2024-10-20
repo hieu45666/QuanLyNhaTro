@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QLNT</string>
+    <string name="Text1">Bài tập lớn nhóm x</string>
+    <string name="Text2">Quản lý nhà trọ</string>
+    <string name="button_manage_rooms">Quản lý nhà trọ</string>
+    <string name="button_manage_buildings">Quản lý dãy nhà trọ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chỉnh sửa thông tin nhà trọ"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextMaDayTro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã dãy trọ"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/editTextMaNhaTro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã nhà trọ"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/editTextSoPhong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số phòng"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/editTextGiaPhong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Giá phòng"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/editTextSoNguoiToiDa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số người tối đa"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xóa nhà trọ"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
