@@ -46,14 +46,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         // Tạo bảng Dãy nhà trọ
         String createDayTable = "CREATE TABLE " + TABLE_DAY_NHA_TRO + " ("
-                + COLUMN_DAY_MA + " INTEGER PRIMARY KEY, "
+                + COLUMN_DAY_MA + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_DAY_TEN + " TEXT, "
                 + COLUMN_DAY_MOTA + " TEXT)";
         db.execSQL(createDayTable);
 
         // Tạo bảng Nhà trọ
         String createNhaTable = "CREATE TABLE " + TABLE_NHA_TRO + " ("
-                + COLUMN_NHA_MA + " INTEGER PRIMARY KEY, "
+                + COLUMN_NHA_MA + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_NHA_PHONG + " INTEGER, "
                 + COLUMN_NHA_GIA + " INTERGER, "
                 + COLUMN_NHA_NGUOI + " INTEGER, "
@@ -100,10 +100,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     // Phương thức thêm dãy nhà trọ
-    public long addDayNhaTro(int maDay, String tenDay, String moTa) {
+    public long addDayNhaTro(String tenDay, String moTa) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_DAY_MA, maDay);
         values.put(COLUMN_DAY_TEN, tenDay);
         values.put(COLUMN_DAY_MOTA, moTa);
         long i = db.insert(TABLE_DAY_NHA_TRO, null, values);
@@ -165,10 +164,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
 
     // Phương thức thêm nhà trọ
-    public void addNhaTro(int maNha, int soPhong, int giaPhong, int soNguoiToida) {
+    public void addNhaTro(int soPhong, int giaPhong, int soNguoiToida) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_NHA_MA, maNha);
         values.put(COLUMN_NHA_PHONG, soPhong);
         values.put(COLUMN_NHA_GIA, giaPhong);
         values.put(COLUMN_NHA_NGUOI, soNguoiToida);

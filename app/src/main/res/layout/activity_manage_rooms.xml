@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/listViewRooms"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <include
+        layout="@layout/item_header"
+        android:id="@+id/header"
+        />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRooms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/layoutBottom"/>
+
+    <!-- Nút thêm phòng -->
     <ImageButton
         android:id="@+id/buttonAddRoom"
         android:layout_width="wrap_content"
@@ -24,6 +31,7 @@
 
     <!-- CheckBox và TextView cho lọc phòng -->
     <RelativeLayout
+        android:id="@+id/layoutBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -34,8 +42,6 @@
             android:id="@+id/checkBoxFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="8dp"
             android:text="Lọc phòng dưới 1 triệu"/>
     </RelativeLayout>
 </RelativeLayout>

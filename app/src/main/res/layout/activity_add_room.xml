@@ -6,12 +6,6 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/editTextMaNhaTro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Mã nhà trọ" />
-
-    <EditText
         android:id="@+id/editTextSoPhong"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

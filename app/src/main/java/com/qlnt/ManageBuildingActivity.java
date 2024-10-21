@@ -111,7 +111,7 @@ public class ManageBuildingActivity extends AppCompatActivity {
             unassignedRooms = databaseHelper.getRoomsWithBuildingID(0); // Lấy danh sách từ DB
             ArrayList<String> roomNames = new ArrayList<>();
             for (NhaTro room : unassignedRooms) {
-                roomNames.add("Phòng " + room.getSoPhong() + " - Giá: " + room.getGiaPhong() + " VND");
+                roomNames.add("Phòng " + room.getSoPhong() + " - Giá: " + String.format("%,d", room.getGiaPhong()) + " VND");
             }
             ArrayAdapter<String> unassignedRoomsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, roomNames);
             listViewUnassignedRooms.setAdapter(unassignedRoomsAdapter);

@@ -100,7 +100,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         ViewHolderChild holder;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.item_room, null);
+            convertView = inflater.inflate(R.layout.item_room_b, null);
             holder = new ViewHolderChild();
             holder.textViewRoomName = convertView.findViewById(R.id.textViewRoomName);
             convertView.setTag(holder);
@@ -109,7 +109,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }
 
         NhaTro room = (NhaTro) getChild(groupPosition, childPosition);
-        holder.textViewRoomName.setText("Phòng " + room.getSoPhong() + " - Giá: " + room.getGiaPhong() + " VND");
+        holder.textViewRoomName.setText("Phòng " + room.getMaNhaTro() + " - Giá: " + String.format("%,d", room.getGiaPhong()) + " VND");
 
         return convertView;
     }

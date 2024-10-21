@@ -11,7 +11,7 @@ import com.qlnt.Model.DayNhaTro;
 
 public class AddBuildingActivity extends AppCompatActivity {
 
-    private EditText editTextBuildingCode, editTextBuildingName, editTextBuildingDescription;
+    private EditText editTextBuildingName, editTextBuildingDescription;
     private Button buttonAddBuilding;
     private DatabaseHelper databaseHelper;
 
@@ -20,8 +20,6 @@ public class AddBuildingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_building);
 
-        // Khởi tạo các view
-        editTextBuildingCode = findViewById(R.id.editTextBuildingCode);
         editTextBuildingName = findViewById(R.id.editTextBuildingName);
         editTextBuildingDescription = findViewById(R.id.editTextBuildingDescription);
         buttonAddBuilding = findViewById(R.id.buttonAddBuilding);
@@ -34,21 +32,17 @@ public class AddBuildingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Lấy dữ liệu từ các trường
-                String buildingCodeStr = editTextBuildingCode.getText().toString();
                 String buildingName = editTextBuildingName.getText().toString();
                 String buildingDescription = editTextBuildingDescription.getText().toString();
 
                 // Kiểm tra dữ liệu đầu vào
-                if (buildingCodeStr.isEmpty() || buildingName.isEmpty() || buildingDescription.isEmpty()) {
+                if (buildingName.isEmpty() || buildingDescription.isEmpty()) {
                     Toast.makeText(AddBuildingActivity.this, "Vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                // Chuyển đổi mã dãy sang số nguyên
-                int buildingCode = Integer.parseInt(buildingCodeStr);
-
                 // Thêm dãy vào cơ sở dữ liệu
-                long result = databaseHelper.addDayNhaTro(buildingCode, buildingName, buildingDescription);
+                long result = databaseHelper.addDayNhaTro(buildingName, buildingDescription);
 
                 if (result != -1) {
                     Toast.makeText(AddBuildingActivity.this, "Thêm dãy trọ thành công!", Toast.LENGTH_SHORT).show();

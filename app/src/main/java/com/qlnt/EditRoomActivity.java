@@ -12,7 +12,7 @@ import android.content.Intent;
 
 public class EditRoomActivity extends AppCompatActivity {
 
-    private EditText editTextMaDayTro, editTextMaNhaTro, editTextSoPhong, editTextGiaPhong, editTextSoNguoiToiDa;
+    private EditText editTextMaDayTro, editTextSoPhong, editTextGiaPhong, editTextSoNguoiToiDa;
     private Button buttonUpdate, buttonDelete;
     private DatabaseHelper databaseHelper;
 
@@ -26,7 +26,6 @@ public class EditRoomActivity extends AppCompatActivity {
 
         // Khởi tạo các EditText và Button
         editTextMaDayTro = findViewById(R.id.editTextMaDayTro);
-        editTextMaNhaTro = findViewById(R.id.editTextMaNhaTro);
         editTextSoPhong = findViewById(R.id.editTextSoPhong);
         editTextGiaPhong = findViewById(R.id.editTextGiaPhong);
         editTextSoNguoiToiDa = findViewById(R.id.editTextSoNguoiToiDa);
@@ -65,7 +64,6 @@ public class EditRoomActivity extends AppCompatActivity {
         NhaTro room = databaseHelper.getNhaTro(maNhaTro);
         if (room != null) {
             editTextMaDayTro.setText(String.valueOf(room.getMaDay()));
-            editTextMaNhaTro.setText(String.valueOf(room.getMaNhaTro()));
             editTextSoPhong.setText(String.valueOf(room.getSoPhong()));
             editTextGiaPhong.setText(String.valueOf(room.getGiaPhong()));
             editTextSoNguoiToiDa.setText(String.valueOf(room.getSoNguoiToiDa()));

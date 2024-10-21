@@ -1,13 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/textViewRoomName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:id="@+id/textRoomCode"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:text="Mã phòng"
+        android:textSize="14sp"
+        android:gravity="center"/>
 
+    <TextView
+        android:id="@+id/textRoomNumber"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:text="Số phòng"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:text="Giá"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/textMaxPeople"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:text="Số người tối đa"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/buttonEditRoom"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="Edit Room"
+        android:gravity="center"/>
+</LinearLayout>
