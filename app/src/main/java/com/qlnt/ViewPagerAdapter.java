@@ -7,8 +7,8 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 
-    public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
-        super(fragmentActivity);
+    public ViewPagerAdapter(FragmentActivity fa) {
+        super(fa);
     }
 
     @NonNull
@@ -16,16 +16,16 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new LoginFragment(); // Fragment đăng nhập
+                return new LoginFragment(); // Fragment cho đăng nhập
             case 1:
-                return new RegisterFragment(); // Fragment đăng ký
+                return new RegisterFragment(); // Fragment cho đăng ký
             default:
-                return new LoginFragment();
+                return new RegisterFragment(); // Mặc định là trang đăng ký
         }
     }
 
     @Override
     public int getItemCount() {
-        return 2; // Số lượng fragment (Đăng nhập và Đăng ký)
+        return 2; // Có 2 tab
     }
 }

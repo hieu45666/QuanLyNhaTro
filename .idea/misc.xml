@@ -5,11 +5,12 @@
       <map>
         <entry key="..\:/PTIT/QLNT/app/src/main/res/drawable/ic_add_background.xml" value="0.124" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.124" />
+        <entry key="..\:/PTIT/QLNT/app/src/main/res/drawable/rounded_button.xml" value="0.1945" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_add_building.xml" value="0.1640625" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_building_adapter.xml" value="0.1" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_edit_building.xml" value="0.11302083333333333" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_edit_room.xml" value="0.14447463768115942" />
-        <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_login_register.xml" value="0.25416666666666665" />
+        <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_login_register.xml" value="0.152" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_manage_building.xml" value="0.1" />
         <entry key="..\:/PTIT/QLNT/app/src/main/res/layout/activity_manage_rooms.xml" value="0.2" />
