@@ -79,7 +79,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }
 
         DayNhaTro building = (DayNhaTro) getGroup(groupPosition);
-        holder.textViewBuildingName.setText(building.getTenDay());
+        holder.textViewBuildingName.setText(building.getTenDay()+" ID: "+building.getMaDay());
 
         // Xử lý sự kiện cho icon sửa
         holder.iconEdit.setOnClickListener(new View.OnClickListener() {
